@@ -1,11 +1,3 @@
 {
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "installCommand": "apt-get update && apt-get install -y libatomic1 && npm install"
-      }
-    }
-  ]
+  "installCommand": "(apt-get update && apt-get install -y libatomic1) || echo 'Skipping system dependency installation'"
 }
